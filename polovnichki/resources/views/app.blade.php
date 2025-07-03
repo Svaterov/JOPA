@@ -77,7 +77,7 @@
 
  /* Раздел Каталог */
  #catalog {
-   padding:50px20px; 
+   padding:50px; 
    background-color: rgba(255,255,255,0.05);
  }
  
@@ -126,7 +126,8 @@
 <div class="hero-content">
 <h2>Добро пожаловать в наш магазин!</h2>
 <p>Здесь вы найдете все необходимое для ремонта и обслуживания вашего автомобиля.</p>
-<a href="#catalog" class="btn">Перейти к каталогу</a>
+<!-- Удалена кнопка -->
+<!-- <a href="#catalog" class="btn">Перейти к каталогу</a> -->
 </div>
 </section>
 
@@ -137,30 +138,38 @@
 
 <!-- Категория Детали -->
 <div class="category-card">
+<a href="/category/detali" style="text-decoration:none; color:black;">
 <img src="" alt="Детали" />
 <h3>Детали</h3>
 <p>Различные автодетали и запчасти.</p>
+</a>
 </div>
 
 <!-- Категория Машины -->
 <div class="category-card">
+<a href="/category/mashiny" style="text-decoration:none; color:black;">
 <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Машины" />
 <h3>Машины</h3>
 <p>Автомобили и автотранспорт.</p>
+</a>
 </div>
 
 <!-- Категория Инструменты -->
 <div class="category-card">
+<a href="/category/instrumenty" style="text-decoration:none; color:black;">
 <img src="https://images.unsplash.com/photo-1612831455549-7f7b9d6d4f4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Инструменты" />
 <h3>Инструменты</h3>
 <p>Инструменты для ремонта и обслуживания.</p>
+</a>
 </div>
 
 <!-- Категория Автокраска -->
 <div class="category-card">
-<img src="https://images.unsplash.com/photo-1600716842457-7f7b9d6d4f4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Автокраска" />
+<a href="/category/avtokraska" style="text-decoration:none; color:black;">
+<img src="" alt="Автокраска" />
 <h3>Автокраска</h3>
 <p>Материалы и оборудование для покраски авто.</p>
+</a>
 </div>
 
 </div>

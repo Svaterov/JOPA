@@ -1,0 +1,1 @@
+<a href="{{ route('catalog.index') }}" class="btn btn-primary">Каталог</a>
