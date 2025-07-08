@@ -4,25 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubcategoriesTable extends Migration
+class CreateOrdersTable extends Migration
 {
     public function up()
     {
-        Schema::create('subcategories', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->text('description')->nullable();
+            $table->foreignId('car_id')->constrained()->onDelete('cascade');
+            $table->string('payment_method'); // способ оплаты: 'card', 'paypal', 'cash'
+            $table->decimal('amount', 12, 2);
+            $table->string('status')->default('pending'); // статус: pending, completed, failed
             $table->timestamps();
-
-            // Внешний ключ:
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('subcategories');
+        Schema::dropIfExists('orders');
     }
 }

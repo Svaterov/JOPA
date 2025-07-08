@@ -1,13 +1,9 @@
-<?php
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\OrderController;
 
-use Illuminate\Support\Facades\Route;
+Route::resource('cars', CarController::class);
+Route::resource('orders', OrderController::class);
 
-Route::get('/', function () {
-    return view('app'); 
-});
-
-// Маршрут для основного каталога
-Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
-
-// Маршрут для подкаталогов
-Route::get('/catalog/{category}', [CatalogController::class, 'show'])->name('catalog.show');
+// Маршрут для оформления заказа по автомобилю:
+Route::get('/buy/{car}', [OrderController::class, 'create'])->name('orders.create');
+Route::post('/buy/{car}', [OrderController::class, 'store'])->name('orders.store');
